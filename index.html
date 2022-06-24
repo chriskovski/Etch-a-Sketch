@@ -11,18 +11,22 @@
     <h1>Etch-a-Sketch</h1>
     <div id="middleBlock">
       <div class="sidebars" id="colorPick">
-        <h2>Choose your Color</h2>
+        <fieldset><legend>Choose your Color</legend>
         <div id="colorBtns">
-          <button class="colorBtn" id="black">Black</button>
-          <button class="colorBtn" id="blue">Blue</button>
-          <button class="colorBtn" id="red">Red</button>
-          <button class="colorBtn" id="rainbow">Rainbow</button>
-        </div>
+          <div><input type="radio" id="black" name="colorBtn" value="black" checked>
+          <label for="black">Black</label></div>
+          <div><input type="radio" id="blue" name="colorBtn" value="blue" >
+          <label for="blue">Blue</label></div>
+          <div><input type="radio" id="red" name="colorBtn" value="red">
+          <label for="red">Red</label></div>
+          <div><input type="radio" id="eraser" name="colorBtn" value="eraser">
+          <label for="eraser">Eraser</label></div>
+        </div></fieldset>
       </div>
       <div id="grid"></div>
-      <div class="sidebars"><h2>Idea Notepad</h2></div>
+      <div class="sidebars"><legend>Idea Notepad</legend><textarea id="textfield"></textarea></div>
     </div>
-    <button id="reset" onclick="resetGrid()">RESET</button>
+    <button id="reset" onclick="resetGrid()">RESET</button><p>Tip: Press the "Reset"-Button to choose your Grid-Size!</p>
     <script src="script.js"></script>
   </body>
 </html>
